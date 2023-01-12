@@ -38,21 +38,68 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+* It is excpected that the leaf with mildew will be detected through its destinct spots caused by the mildew deasese.
+* The validation will be made thorugh comparision with a healthy leaf(Image study)
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+
+### Business Requirement 1: Data Visualization
+
+* We will display the "mean" and "standard deviation" images for healthy and mildew infected leaf's.
+* We will display the difference between an average healthy leaf and an average mildew infected leaf.
+* We will display a image montage for either healthy or mildew infected leaf.
+
+### Business Requirement 2: Classification
+
+* we want to predict if an leaf is infected with mildew or not.
+* We want to build a binary classifier and generate reports.
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
+### MalariaClf
 
+* We want a ML model to predict if a leaf is infected with mildew or not, based on historical image data. It is a supervised model, a 2-class, single-label, classification model.
+* Our ideal outcome is provide the farm team a faster and reliable diagnostic if a given leaf/tree is infected or not with mildew.
+* The model success metrics are
+Accuracy of 97% or above on the test set.
+* The model output is defined as a flag, indicating if the leaf has mildew or not and the associated probability of being infected or not. The farm staff will do collect the lleafs as usual and upload the picture to the App. The prediction is made on the fly (not in batches).
+* Heuristics: The current diagnostic needs an experienced staff and detailed inspection to distinguish infected or uninfected leafs. A leaf sample is collected, mixed with a reagent and examined under the microscope. Visual criteria are used to detect mildew. It leaves room to produce inaccurate diagnostics due to human errors And takes alot of time. 
+* The training data to fit the model come from Code institute and was found the kaggle Website. This dataset contains about FIX THIS. We have extracted a subset of 5643 images from this dataset and saved it to kaggle dataset directory for quicker model training.
+Train data - target: infected or not; features: all images
+
+FIXING THIS AND THE UPPER IN THE PROJECT
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-* Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
-
+* Page 1: Quick Project Summary
+Quick project summary
+General Information
+Mildew is an fungus that can infect the leafs of the cherry tree.
+A leaf from the cherry tree is collected. Visual criteria are used to detect mildew infection.
+The mildew infection is devistating to the cherry tree farmers and takes alot of time for the farm workers to detect and handle
+Project Dataset
+The available dataset contains 5643 out of +27 thousand images taken from blood smear workflow (when a drop of blood it taken on a glass slide) of cells that are parasitized or uninfected with malaria.
+Link to addition ainformation
+Business requirements
+The client is interested to have a study to visually differentiate between a parasite contained and uninfected cell.
+The client is interested to tell whether a given cell contains malaria parasite or not.
+Page 2: Cells Visualizer
+It will answer business requirement 1
+Checkbox 1 - Difference between average and variability image
+Checkbox 2 - Differences between average parasitized and average uninfected cells
+Checkbox 3 - Image Montage
+Page 3: Malaria Detector
+Business requirement 2 information - "The client is interested to tell whether a given cell contains malaria parasite or not."
+Link to download a set of parasite contained and uninfected cell images for live prediction.
+User Interface with a file uploader widget. The user should upload multiple malaria cell image. It will display the image and a prediction statement, indicating if the cell is infected or not with malaria and the probability associated with this statement.
+Table with image name and prediction results.
+Download button to download table.
+Page 4: Project Hypothesis and Validation
+Bloack for each project hypothesis, describe the conclusion and how you validated.
+Page 5: ML Performance Metrics
+Label Frequencies for Train, Validation and Test Sets
+Model History - Accuracy and Losses
+Model evaluation result
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
