@@ -1,12 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-## Gitpod Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the Use this template button to get started.
-
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about Gitpod and the extensions we use. 
 
 ## Gitpod Reminders
 
@@ -46,27 +37,27 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ### Business Requirement 1: Data Visualization
 
-* We will display the "mean" and "standard deviation" images for healthy and mildew infected leaf's.
-* We will display the difference between an average healthy leaf and an average mildew infected leaf.
-* We will display a image montage for either healthy or mildew infected leaf.
+* We will display the "mean" and "standard deviation" images for healthy and mildew containing leaf's.
+* We will display the difference between an average healthy leaf and an average mildew containing leaf.
+* We will display a image montage for either healthy or mildew containing leaf.
 
 ### Business Requirement 2: Classification
 
 * we want to predict if an leaf is infected with mildew or not.
-* We want to build a binary classifier and generate reports.
+* We want to build a binary classifier using Neural networks and generate reports.
 
 
 ## ML Business Case
 
-### MalariaClf
+### MildewCLF
 
 * We want a ML model to predict if a leaf is infected with mildew or not, based on historical image data. It is a supervised model, a 2-class, single-label, classification model.
 * Our ideal outcome is provide the farm team a faster and reliable diagnostic if a given leaf/tree is infected or not with mildew.
 * The model success metrics are
 Accuracy of 97% or above on the test set.
 * The model output is defined as a flag, indicating if the leaf has mildew or not and the associated probability of being infected or not. The farm staff will do collect the lleafs as usual and upload the picture to the App. The prediction is made on the fly (not in batches).
-* Heuristics: The current diagnostic needs an experienced staff and detailed inspection to distinguish infected or uninfected leafs. A leaf sample is collected, mixed with a reagent and examined under the microscope. Visual criteria are used to detect mildew. It leaves room to produce inaccurate diagnostics due to human errors And takes alot of time. 
-* The training data to fit the model come from Code institute and was found the kaggle Website. This dataset contains about FIX THIS. We have extracted a subset of 5643 images from this dataset and saved it to kaggle dataset directory for quicker model training.
+* Heuristics: The current diagnostic needs an experienced staff and detailed inspection to distinguish mildew containing or healthy leafs. A leaf sample is collected, mixed with a reagent and examined under the microscope. Visual criteria are used to detect mildew. It leaves room to produce inaccurate diagnostics due to human errors And takes alot of time. 
+* The training data to fit the model come from Code institute and was found the kaggle Website. This dataset contains about 4208 images. We have extracted a subset of 4208 images from this dataset and saved it to kaggle dataset directory for quicker model training.
 Train data - target: infected or not; features: all images
 
 FIXING THIS AND THE UPPER IN THE PROJECT
@@ -75,23 +66,22 @@ FIXING THIS AND THE UPPER IN THE PROJECT
 Quick project summary
 General Information
 Mildew is an fungus that can infect the leafs of the cherry tree.
-A leaf from the cherry tree is collected. Visual criteria are used to detect mildew infection.
-The mildew infection is devistating to the cherry tree farmers and takes alot of time for the farm workers to detect and handle
+A leaf from the cherry tree is collected. Visual criteria are used to detect mildew fungus.
+The mildew fungus is devistating to the cherry tree farmers and takes alot of time for the farm workers to detect and handle
 Project Dataset
-The available dataset contains 5643 out of +27 thousand images taken from blood smear workflow (when a drop of blood it taken on a glass slide) of cells that are parasitized or uninfected with malaria.
-Link to addition ainformation
+The dataset is containing 4208 pictures and is taken from [kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves/code)
 Business requirements
-The client is interested to have a study to visually differentiate between a parasite contained and uninfected cell.
-The client is interested to tell whether a given cell contains malaria parasite or not.
-Page 2: Cells Visualizer
+The client is interested in a study to differentiate between a Mildew contained leaf and a healthy leaf.
+The client is interested in telling whether a given leaf(tree) contains mildew or not.
+Page 2: leaves visualizer
 It will answer business requirement 1
 Checkbox 1 - Difference between average and variability image
-Checkbox 2 - Differences between average parasitized and average uninfected cells
+Checkbox 2 - Differences between average mildew containing and average healthy leaf
 Checkbox 3 - Image Montage
-Page 3: Malaria Detector
-Business requirement 2 information - "The client is interested to tell whether a given cell contains malaria parasite or not."
-Link to download a set of parasite contained and uninfected cell images for live prediction.
-User Interface with a file uploader widget. The user should upload multiple malaria cell image. It will display the image and a prediction statement, indicating if the cell is infected or not with malaria and the probability associated with this statement.
+Page 3: Mildew Detector
+Business requirement 2 information - "The client is interested to tell whether a given leaf contains Mildew fungus or not."
+Link to download a set of mildew contained and healthy leaf images for live prediction.
+User Interface with a file uploader widget. The user should upload multiple mildew leaf image. It will display the image and a prediction statement, indicating if the leaf is containing mildew or not and the probability associated with this statement.
 Table with image name and prediction results.
 Download button to download table.
 Page 4: Project Hypothesis and Validation
@@ -123,21 +113,18 @@ Model evaluation result
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+### Media credits
+
+- The dataset is taken from [Kaggle](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves/code) 
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- The base template for this project was taken from Code Institute
+- Much of the work is inpsired of the Malaria detection project provided by Code Insitute.
 
-### Media
+- Articles that have inspired this project.
+    - [Medium](https://medium.com/zero-equals-false/early-stopping-to-avoid-overfitting-in-neural-network-keras-b68c96ed05d9)
+    - [Geeksforgeeks](https://www.geeksforgeeks.org/choose-optimal-number-of-epochs-to-train-a-neural-network-in-keras/)
+    - [Github](https://github.com/grajpal123/Emergency_Non-Emergency_Vehicle_Image_Classification/blob/main/Model%20Checkpointing%20in%20Keras.ipynb)
+    - [Numpy ninja](https://www.numpyninja.com/post/weight-initialization-techniques)
 
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
-
-
-## Acknowledgements (optional)
-* Thank the people that provided support throughout this project.
