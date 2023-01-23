@@ -8,6 +8,11 @@ node_modules/
 .github/
 cloudinary_python.txt
 kaggle.json
+/workspace/mildew-detection/inputs/
+/workspace/mildew-detection/inputs/mildew_dataset/
+/workspace/mildew-detection/inputs/mildew_dataset/cherry-leaves/
 inputs/
+inputs/mildew_dataset/
+inputs/mildew_dataset/cherry-leaves/
 
 
