@@ -92,7 +92,9 @@ Model History - Accuracy and Losses
 Model evaluation result
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* Grayscale imageset
+    * I decided not to use the grayscale image set because of the good results from the RGB image set.
+    * The grayscale image set and model also made the workspace to heavy in terms of memory.
 
 ## Deployment
 ### Heroku
@@ -108,7 +110,44 @@ Model evaluation result
 
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+* kaggle
+    * Kaggle is used to fetch/import the dataset for this project
+
+* PIL
+    * PIL is used to turn the pictures into grayscale imageset (Though not used in the final deployment)
+
+* OS
+    * Is used to fetch/get/create files and paths throughout the project
+
+* Joblib
+    * Used to save files and images thorughtout the project
+
+* Random
+    * Random is used to shuffle and create "random" instances throughout the project 
+
+* seaborn
+    * Is used to create plots/charts etc
+
+* matplotlib.pyplot
+    * Also used to create plots etc
+
+* tensorflow
+    * keras.preprocessing is used to load the picturen into array
+    * tensorflow.keras.preprocessing.image is used for agmentation
+    * tensorflow.keras.models is used to determine the model type
+    * tensorflow.keras.layers is used to determine the layers inside the model
+    * tensorflow.keras.initializer is used for the kernal initializer in the model
+    * tensorflow.keras.callbacks is used for earlystopping when training to reduce risk of overfitting
+
+* numpy
+    * Numpy provides ability to load multidimensional arrays and other tools to help finding items inside arrays
+
+* itertools
+    * Is used to iterate through images in dataset
+
+* Pandas
+    * Is used to fetch model history
+ 
 
 
 ## Credits 
